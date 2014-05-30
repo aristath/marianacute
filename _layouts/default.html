@@ -1,0 +1,36 @@
+{% include head.html %}
+{% include header.html %}
+
+<section id="portfolio">
+	<div class="page">
+		<div class="container">
+			<div class="section-title">
+				<h1 data-animate="fade-in-top"><span class="text-primary">My</span> Work</h1>
+				<hr data-animate="fade-in" />
+				<p class="subheading" data-animate="fade-in-top"></p>
+			</div>
+		</div>
+		<div id="portfolio-items" class="portfolio-grid" data-animate="fade-in">
+			{% for post in site.posts %}
+				<div class="portfolio-item" data-title="{{ post.title }}" data-description="{{ post.content }}" data-largesrc="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image0|cgi_escape}}&container=focus&resize_w=480&resize_h=230&refresh=2592000">
+					<div class="portfolio-item-inner">
+						<div class="portfolio-image">
+							<div class="portfolio-overlay">
+								<div class="portfolio-details">
+									<h3>{{ post.title }}</h3>
+									<h6>{{ post.categories }}</h6>
+								</div>
+							</div>
+							<img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image0|cgi_escape}}&container=focus&resize_w=480&resize_h=230&refresh=2592000" alt="" />
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>
+
+{% include footer.html %}
+{% include scripts.html %}
+
