@@ -1,0 +1,21 @@
+{% include head.html %}
+{% include header-single.html %}
+
+<section id="content">
+	<div class="page">
+		<div class="container">
+			<div class="section-title">
+				<h1><span class="text-primary">{{ page.title }}</h1>
+			</div>
+			<div class="single-port-content">
+				{{ content }}
+			</div>
+
+			{% include slider.html %}
+		</div>
+	</div>
+</section>
+
+{% include footer.html %}
+{% include scripts.html %}
+
