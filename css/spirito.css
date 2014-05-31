@@ -2794,6 +2794,6 @@ body[data-color="yellow"] aside .tags li a {
 }
 
 .single-port-content {
-  font-size: 1.25;
-  padding: 0 15%;
+  font-size: 22px;
+  text-align: center;
 }
