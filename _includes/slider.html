@@ -1,36 +1,36 @@
 <div class="carousel slide" data-ride="carousel">
-	{% if page.image1 %}
+	{% if post.image1 %}
 		<ol class="carousel-indicators">
 			<li data-target="#carousel-example-generic" data-slide-to="9" class="active"></li>
-			{% if page.image1 %}<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>{% endif %}
-			{% if page.image2 %}<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>{% endif %}
-			{% if page.image3 %}<li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>{% endif %}
-			{% if page.image4 %}<li data-target="#carousel-example-generic" data-slide-to="3" class="active"></li>{% endif %}
-			{% if page.image5 %}<li data-target="#carousel-example-generic" data-slide-to="4" class="active"></li>{% endif %}
-			{% if page.image6 %}<li data-target="#carousel-example-generic" data-slide-to="5" class="active"></li>{% endif %}
-			{% if page.image7 %}<li data-target="#carousel-example-generic" data-slide-to="6" class="active"></li>{% endif %}
-			{% if page.image8 %}<li data-target="#carousel-example-generic" data-slide-to="7" class="active"></li>{% endif %}
-			{% if page.image9 %}<li data-target="#carousel-example-generic" data-slide-to="8" class="active"></li>{% endif %}
+			{% if post.image1 %}<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>{% endif %}
+			{% if post.image2 %}<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>{% endif %}
+			{% if post.image3 %}<li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>{% endif %}
+			{% if post.image4 %}<li data-target="#carousel-example-generic" data-slide-to="3" class="active"></li>{% endif %}
+			{% if post.image5 %}<li data-target="#carousel-example-generic" data-slide-to="4" class="active"></li>{% endif %}
+			{% if post.image6 %}<li data-target="#carousel-example-generic" data-slide-to="5" class="active"></li>{% endif %}
+			{% if post.image7 %}<li data-target="#carousel-example-generic" data-slide-to="6" class="active"></li>{% endif %}
+			{% if post.image8 %}<li data-target="#carousel-example-generic" data-slide-to="7" class="active"></li>{% endif %}
+			{% if post.image9 %}<li data-target="#carousel-example-generic" data-slide-to="8" class="active"></li>{% endif %}
 		</ol>
 	{% endif %}
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner">
 		<div class="item active">
-			<img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image0|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt="">
+			<img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image0|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt="">
 		</div>
-		{% if page.image1 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image1|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image2 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image2|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image3 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image3|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image4 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image4|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image5 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image5|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image6 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image6|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image7 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image7|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image8 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image8|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
-		{% if page.image9 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ page.image9|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image1 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image1|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image2 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image2|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image3 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image3|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image4 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image4|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image5 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image5|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image6 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image6|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image7 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image7|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image8 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image8|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
+		{% if post.image9 %}<div class="item"><img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image9|uri_escape}}&container=focus&resize_w=1140&resize_h=1140&refresh=2592000" alt=""></div>{% endif %}
 	</div>
 
-	{% if page.image1 %}
+	{% if post.image1 %}
 		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left"></span>
 		</a>
