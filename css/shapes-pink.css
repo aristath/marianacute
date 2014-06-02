@@ -2057,3 +2057,7 @@ p {
 h3.project-title {
     font-size: 16px;
 }
+
+#project-preview p {
+    font-weight: 400;
+}
