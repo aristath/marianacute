@@ -107,13 +107,14 @@
 			var shift = (height - windowHeight) / 2;
 			if (shift < 0) shift = 0;
 			$el.css("top",-shift);
+
 		} else {
-			$el.width('auto').height(windowHeight);			
-			// shift the element left
+			$el.width('auto').height(windowHeight);
 			var width = $el.width();
+			
 			var shift = (width - windowWidth) / 2;
 			if (shift < 0) shift = 0;
-			$el.css("left",-shift);
+			$el.css("left", -shift);
 			
 			// this is a hack mainly due to the iphone
 			if (shift === 0) {
@@ -178,8 +179,9 @@
 				clearTimeout(resizeTimeout);
 				resizeTimeout = setTimeout(function() {
 					$.fn.videoBG.setFullscreen($video);
-				},100);	
+				},100);
 			});
+
 			$.fn.videoBG.setFullscreen($video);
 		}
 			
