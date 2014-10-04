@@ -1,132 +1,225 @@
 ---
 layout: default
-title: Mariana Samandourou, Street Artist
 ---
 
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en" class="no-js"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en" class="no-js"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en" class="no-js"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Loop | Parallax HTML One-Page Template for Agency and Personal</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Parallax HTML One-Page Template for Agency and Personal">
+	<meta name="author" content="The Develovers">
 
-		
-		<!-- ==============================================
-		HEADER
-		=============================================== -->
-		<header id="home" class="jumbotron">
-		
-			<div class="container">
-			
-				<img class="img-responsive img-center header-logo" src="assets/logo.png" alt="">
-			
-				<div class="message-box clearfix">
-				
-					<div class="first-line">
-						<p><strong>MARIANA</strong>CUTE</p>
-					</div>	
-					
-					<div class="second-line flexslider home-slider">
-					
-						<ul class="slides">
-						
-							<li><p>ARTIST</p></li>
-							<li><p>MIXED MEDIA</p></li>
-							<li><p>STREET ART</p></li>
-							
-						</ul>
-						
-					</div><!--End home-slider -->
-					
-				</div><!--End message-box -->
-				
-			</div><!--End container -->
-			
-		</header><!--End header -->
+	<!-- Styles -->	
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/main.css" rel="stylesheet">
 
-		<!-- ==============================================
-		PORTFOLIO
-		=============================================== -->		
-		<section  id="portfolio">
-			
-			<!--==== Project Preview Panel (DO NOT REMOVE)====-->
-			
-			<div id="preview-scroll"></div>
-			<div id="preview-loader"></div>
-			
-			<div id="project-preview-wrapper">
-			<div id="project-preview">
-				
-				<div class="container">
-				
-					<div class="preview-header">
-						<h1 class="preview-title"></h1><span class="close-preview"><i class="fa fa-times"></i></span>
-					</div>
-				
-					<div class="row">
-					
-						<div id="preview-media" class="col-md-7"></div>
-						
-						<div id="preview-details" class="col-md-5">
-							<h2>Project Details</h2>
-							<ul></ul>
-						</div>
-						
-					</div>
-					
-					<div id="preview-content" class="row"></div>
-				
-				</div><!--End container -->
-				
-			</div><!--End #project-preview panel-->
-			</div><!--End #project-preview-wrapper-->
-			
-			<div class="padding-bottom bg-light"><!--Start Projects Band-->
-			
-				<div class="container masonry-wrapper">
-				
-					<div id="projects-container" class="">
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700' rel='stylesheet' type='text/css'>
 
-						{% for post in site.posts %}
+	<!-- IE 9 Fallback-->
+	<!--[if IE 9]>		
+		<link href="assets/css/ie.css" rel="stylesheet">
+	<![endif]-->
 
-						<article class="project-item">
-							<a href="#">
-								<img class="img-responsive project-thumb" src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image0|uri_escape}}&container=focus&resize_w=350&resize_h=230&refresh=2592000"  alt=""><!--Project thumb -->
-								
-								<div class="details">
-									<h3 class="project-title">{{ post.title }}</h3><!--Project Title -->
-								</div>
-							</a>
-							<!--==== Project Preview ====-->
-							<div class="sr-only">
-								<div class="project-media" data-images="{% if post.image0 %}{{ post.image0 }}{% endif %}{% if post.image1 %},{{ post.image1 }}{% endif %}{% if post.image2 %},{{ post.image2 }}{% endif %}{% if post.image3 %},{{ post.image3 }}{% endif %}{% if post.image4 %},{{ post.image4 }}{% endif %}{% if post.image5 %},{{ post.image5 }}{% endif %}{% if post.image6 %},{{ post.image6 }}{% endif %}{% if post.image7 %},{{ post.image7 }}{% endif %}{% if post.image8 %},{{ post.image8 }}{% endif %}{% if post.image9 %},{{ post.image9 }}{% endif %}{% if post.image10 %},{{ post.image10 }}{% endif %}{% if post.image11 %},{{ post.image11 }}{% endif %}"></div>
-								<div class="project-attributes">
-									<div class="newline"><span>Details : </span>{{ post.content }}</div>
-								</div>
-							
-							</div><!-- End Project Preview -->
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements and IE Fallback-->
+	<!--[if lt IE 9]>		
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
 
-							
-						</article>
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
 
-						{% endfor %}
+</head>
+<body id="top">
 
-					</div><!-- End #projects-container --> 
-					
-				</div><!-- End container --> 
-
-			</div><!--End Projects Band-->
-			
-		</section><!-- End portfolio section -->
-
-		<!-- ==============================================
-		SOCIAL LINKS
-		=============================================== -->	
-		
-		<section id="social-links" class="bg-transparent">
-		
-			<div class="container">
-				<ul>
-					<li class="scrollimation fade-up d1">
-						<a href="#facebooklink" class="icon"><i class="fa fa-facebook"></i></a>
-						<h4>Like us on Facebook</h4>
-					</li>
+	<!-- NAVBAR -->
+	<div class="navbar navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+					<span class="sr-only">Menu</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">
+					<img src="assets/img/loop-logo.png" alt="Loop Logo" />
+					<h1 class="hide">Mariana Samandourou Art</h1>
+				</a>
+			</div>
+			<nav class="navbar-collapse collapse" id="main-nav" role="navigation">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#top">HOME</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#services">SERVICES</a></li>
+					<li><a href="#works">OUR WORKS</a></li>
+					<li><a href="#contact">CONTACT</a></li>
 				</ul>
-					
-			</div><!--End container -->
+			</nav>
+		</div>
+	</div>
+	<!-- END NAVBAR -->
+
+	<!-- HERO UNIT -->
+	<div id="hero-unit" class="hero-unit">
 			
-		</section><!--End skills section -->
+		<div class="slideshow">
+			<div class="hero-content text-center">
+				<!-- Hero text -->
+				<div id="slidecaption" class="slide-caption"></div>	
+				<div class="hero-buttons">
+					<a href="#about" id="btn-about" class="btn btn-info btn-lg"><i class="fa fa-arrow-circle-o-down"></i> READ MORE</a>
+					<a href="#contact" id="btn-contact" class="btn btn-primary btn-lg"><i class="fa fa-phone-square"></i> GET IN TOUCH</a>
+				</div>
+			</div>
+
+			<!-- Navigation -->
+			<div class="slide-navigation">
+				<a id="prevslide" class="load-item"><i class="fa fa-angle-left"></i></a>
+				<a id="nextslide" class="load-item"><i class="fa fa-angle-right"></i></a>
+				
+				<!-- Slide Pagination -->
+				<ul id="slide-list" class="list-inline"></ul>
+
+				<!-- Control Bar -->
+				<div id="controls-wrapper" class="load-item">
+					<div id="controls">
+						<a id="pauseplay"><i class="fa fa-pause"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END HERO UNIT -->
+	
+
+	<!-- MAIN CONTENT -->
+	<div id="main-content" class="main-content">
+		
+		<!-- ABOUT -->
+		<div id="about" class="section about">
+			<div class="container">
+				<div class="section-heading">
+					<h2>ABOUT</h2>
+					<p>A little about us</p>
+					<hr />
+				</div>
+				<div class="section-content">
+					<div class="row">
+						<img src="assets/img/about-img.png" alt="About Us" class="img-left" />
+						<div class="col-lg-9 col-lg-offset-3">
+						<p>This is where we'll write who we are and what we do.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END ABOUT -->
+
+		<!-- WORKS -->
+		<div id="works" class="section works">
+			<div class="section-heading">
+				<h2>WORKS</h2>
+				<p>The best thing is when our work become part of client success</p>
+				<hr />
+			</div>
+			<div class="section-content">				
+				<div class="work-item-wrapper">
+					<ul class="work-item-list list-col-4">
+						{% for post in site.posts %}
+							<li class="{{ post.tags }}">
+								<img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image0|uri_escape}}&container=focus&resize_w=600&resize_h=500&refresh=2592000" alt="{{ post.title }}">
+								<div class="image-overlay">
+									<a href="{{ post.image0 }}" class="media-popup" title="The Guitar">
+										<div class="work-item-info">
+											<h3>{{ post.title }}</h3>
+											<p>{{ post.content }}</p>
+											<i class="fa fa-search-plus"></i>
+										</div>
+									</a>
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END WORKS -->
+
+		<!-- CONTACT -->
+		<div id="contact" class="section contact">
+			<div class="section-heading">
+				<h2>GET IN TOUCH</h2>
+				<p>Now it's time to build a business and relationship</p>
+				<hr />
+			</div>
+			<div class="section-content">
+				<div class="contact-info">
+					<div class="container">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END CONTACT -->
+
+		<!-- TWITTER STREAM -->
+		<div id="twitter-stream" class="section twitter-stream">
+			<div class="container">
+				<div class="twitter-icon">
+					<i class="fa fa-twitter"></i>
+				</div>
+				<div id="tweet"></div>
+			</div>
+		</div>
+		<!-- END TWITTER STREAM -->
+
+	</div>
+	<!-- END MAIN CONTENT -->
+
+	<!-- FOOTER -->
+	<footer id="footer" class="section">
+		<div class="container">
+			<p class="copyright pull-left">&copy; 2014. The Develovers. All Rights Reserved.</p>
+			<ul class="list-inline pull-right social-icon">
+				<li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
+
+	<div class="back-to-top">
+		<a href="#top"><i class="fa fa-chevron-up"></i></a>
+	</div>
+
+	<!-- JAVASCRIPT -->
+	<script src="assets/js/jquery-2.1.0.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="assets/js/jquery.easing.min.js"></script>
+	<script src="assets/js/supersized.3.2.7.min.js"></script>
+	<script src="assets/js/supersized.shutter.min.js"></script>
+	<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+	<script src="assets/js/google-map.js"></script>	
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/jquery.isotope.js"></script>
+	<script src="assets/js/wow.js"></script>
+	<script src="assets/js/jquery.flexslider-min.js"></script>	
+	<script src="assets/js/jpreloader.min.js"></script>
+	<script src="assets/js/jquery.magnific-popup.js"></script>
+	<script src="assets/js/loop.js"></script>
+
+</body>
+</html>
