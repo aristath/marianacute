@@ -1604,7 +1604,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     var targets      = this.targets
     var activeTarget = this.activeTarget
     var i
-//alert('this.$body[0].scrollHeight ' + this.$body[0].scrollHeight + ", this.$scrollElement.height():"+this.$scrollElement.height());
+
     if (scrollTop >= maxScroll) {
       return activeTarget != (i = targets.last()[0]) && this.activate(i)
     }
