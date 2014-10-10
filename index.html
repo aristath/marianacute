@@ -47,14 +47,13 @@ layout: default
 				</button>
 				<a href="index.html" class="navbar-brand">
 					<img src="assets/images/mariana-logo.png" alt="marianacute logo" />
-					<h1 class="hide">Parallax HTML One-Page Template</h1>
+					<h1 class="hide">Marianna Samandourou</h1>
 				</a>
 			</div>
 			<nav class="navbar-collapse collapse" id="main-nav" role="navigation">
 				<ul class="nav navbar-nav navbar-right nav-text-light">
 					<li class="active"><a href="#top">HOME</a></li>
 					<li><a href="#about">ABOUT ME</a></li>
-					<li><a href="#services">SERVICES</a></li>
 					<li><a href="#works">WORKS</a></li>
 					<li><a href="#contact">CONTACT ME</a></li>
 				</ul>
@@ -114,29 +113,11 @@ layout: default
 					<hr />
 				</div>
 				<div class="section-content">
-					<p>Progressively maintain inexpensive information without intuitive markets. Quickly reconceptualize 2.0 imperatives without next-generation meta-services. Professionally conceptualize plug-and-play metrics without orthogonal information. Appropriately strategize dynamic infrastructures and turnkey channels. Seamlessly synthesize high-quality total linkage without distinctive intellectual capital.</p>
-
-					<p>Completely reinvent business mindshare with superior strategic theme areas. Dramatically build reliable platforms without real-time e-tailers. Competently predominate covalent scenarios rather than future-proof content. Intrinsicly innovate holistic users whereas cost effective partnerships. Objectively transform collaborative outsourcing before an expanded array of services.
-
-					Monotonectally provide access to next-generation imperatives rather than mission-critical materials. Seamlessly negotiate excellent services rather than web-enabled sources. Quickly actualize proactive niches rather than user friendly catalysts for change. Efficiently negotiate distributed experiences for alternative best practices. Efficiently.</p>
+				<p>The bio</p>
 				</div>
 			</div>
 		</div>
 		<!-- END ABOUT -->
-
-		<!-- FULL-WIDTH PARALLAX -->
-		<div id="social-network" class="section full-width-parallax parallax">
-			<div class="container">
-				<h2>Find me elsewhere in the web</h2>
-				<ul class="list-inline social-icon">
-					<li class="wow rollIn" data-wow-delay='0.3s'><a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-					<li class="wow rollIn" data-wow-delay='0.3s'><a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-					<li class="wow rollIn" data-wow-delay='0.3s'><a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
-					<li class="wow rollIn" data-wow-delay='0.3s'><a href="#" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- END FULL-WIDTH PARALLAX -->
 
 		<!-- WORKS -->
 		<div id="works" class="section works">
@@ -148,20 +129,18 @@ layout: default
 			<div class="section-content">				
 				<ul class="list-inline work-item-filters">
 					<li><a class="active" href="#" data-filter="*">ALL</a></li>
-					<li><a href="#" data-filter=".design">DESIGN</a></li>
-					<li><a href="#" data-filter=".photography">PHOTOGRAPHY</a></li>
-					<li><a href="#" data-filter=".ui">UI</a></li>
-					<li><a href="#" data-filter=".ux">UX</a></li>
-					<li><a href="#" data-filter=".video">VIDEO</a></li>
+					{% for cat in site.categories %}
+						<li><a href="#" data-filter=".design">{{ cat }}</a></li>
+					{% endfor %}
 				</ul>
 
 				<div class="work-item-wrapper">
 					<ul class="work-item-list list-col-4">
 						{% for post in site.posts %}
 							<li class="work-item {{ post.category }}">
-								<img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image|uri_escape}}&container=focus&resize_w=600&resize_h=500&refresh=2592000" alt="{{ post.title }}">
+								<img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url={{ post.image|uri_escape }}&container=focus&resize_w=500&resize_h=416&refresh=2592000" alt="{{ post.title }}">
 								<div class="image-overlay">
-									<a href="{{ post.image }}" class="media-popup" title="The Guitar">
+									<a href="{{ post.image }}" class="media-popup" title="{{ post.title }}">
 										<div class="work-item-info">
 											<h3>{{ post.title }}</h3>
 											<p>{{ post.content }}</p>
