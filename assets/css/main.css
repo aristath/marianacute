@@ -1,3 +1,19 @@
+html, body {
+    margin: 0;
+}
+body {
+    background: #fff;
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+#main-content {
+    margin-top: 100px;
+}
 #works-container .item {
     background-size: cover;
     background-position: center center;
@@ -6,7 +22,6 @@
 
 #works-container .item {
     min-height: 200px;
-    min-width: 250px;
 }
 
 #works-container .item img {
@@ -25,4 +40,14 @@
 #works-container .item img {
     width: 100%;
     max-height: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+      #works-container .item { width: 33.33%; }
+      #works-container .item.gigante { width: 66.66%; }
+}
+
+@media only screen and (max-width: 767px) {
+      #works-container .item { width: 50%; }
+      #works-container .item.gigante { width: 100%; }
 }
