@@ -1,4 +1,4 @@
 name: MarianaCute
 markdown: redcarpet
-pygments: true
+highlighter: rouge
 permalink: pretty
