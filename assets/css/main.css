@@ -116,3 +116,7 @@ body {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+.social-icons img {
+    max-width: 30px;
+    height: auto;
+}
