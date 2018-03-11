@@ -20,6 +20,7 @@ body {
 }
 #header .container {
     float: left;
+    width: 100%;
 }
 
 #header .logo {
@@ -117,6 +118,6 @@ body {
     100% { opacity:1; }
 }
 .social-icons img {
-    max-width: 30px;
+    max-width: 40px;
     height: auto;
 }
